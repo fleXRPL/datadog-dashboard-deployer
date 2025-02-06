@@ -1,0 +1,29 @@
+[flake8]
+max-line-length = 125
+extend-ignore = E203, W503
+exclude =
+    .git,
+    __pycache__,
+    build,
+    dist,
+    *.egg-info,
+    .venv,
+    venv
+
+# Docstring settings
+docstring-convention = google
+
+# Complexity settings
+max-complexity = 10
+
+# Import settings
+import-order-style = google
+application-import-names = datadog_dashboard_deployer
+
+# Error format
+format = %(path)s:%(row)d:%(col)d: %(code)s %(text)s
+
+# Additional settings
+statistics = True
+count = True
+show-source = True 

@@ -1,0 +1,4 @@
+datadog>=0.44.0
+PyYAML>=6.0
+click>=8.0.0
+jsonschema>=4.0.0 

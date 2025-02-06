@@ -1,0 +1,42 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 5
+    target-branch: "main"
+    labels:
+      - "security"
+      - "dependencies"
+    commit-message:
+      prefix: "security"
+      include: "scope"
+    reviewers:
+      - "garotm"
+    assignees:
+      - "garotm"
+    versioning-strategy:
+      increase-if-necessary: true
+    allow:
+      - dependency-type: "direct"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-minor", "version-update:semver-patch"]
+    security-updates-only: true
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 3
+    labels:
+      - "security"
+      - "github-actions"
+    commit-message:
+      prefix: "security"
+      include: "scope"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-minor", "version-update:semver-patch"]
+    security-updates-only: true 

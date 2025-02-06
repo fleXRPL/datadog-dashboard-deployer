@@ -1,0 +1,18 @@
+version: "1.0"
+defaults:
+  layout_type: "ordered"
+  refresh_interval: 300
+  tags:
+    - "env:test"
+    - "team:testing"
+
+dashboards:
+  - name: "Test Dashboard"
+    description: "Dashboard for testing"
+    widgets:
+      - title: "Test Widget"
+        type: "timeseries"
+        query: "avg:system.cpu.user{*}"
+      - title: "Test Value"
+        type: "query_value"
+        query: "sum:http.requests{*}" 
