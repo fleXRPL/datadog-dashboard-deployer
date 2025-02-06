@@ -1,0 +1,30 @@
+# Basic dashboard configuration example
+version: "1.0"
+dashboards:
+  - name: "Basic System Monitoring"
+    description: "Essential system metrics dashboard"
+    layout_type: "ordered"
+    widgets:
+      - title: "CPU Usage"
+        type: "timeseries"
+        query: "avg:system.cpu.user{*} by {host}"
+        visualization:
+          type: "line"
+          yaxis:
+            min: 0
+            max: 100
+
+      - title: "Memory Usage"
+        type: "timeseries"
+        query: "avg:system.mem.used{*} by {host}"
+        visualization:
+          type: "line"
+          yaxis:
+            min: 0
+            max: 100
+
+      - title: "Disk Usage"
+        type: "query_value"
+        query: "avg:system.disk.used{*} by {host}"
+        precision: 2
+        unit: "%" 

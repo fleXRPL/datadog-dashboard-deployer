@@ -1,0 +1,57 @@
+# Advanced dashboard configuration example
+version: "1.0"
+
+# Global defaults for all dashboards
+defaults:
+  layout_type: "ordered"
+  refresh_interval: 300
+  tags:
+    - "managed-by:datadog-dashboard-deployer"
+    - "team:infrastructure"
+
+# Template definitions
+templates:
+  system_widgets: &system_widgets
+    - title: "CPU Usage"
+      type: "timeseries"
+      query: "avg:system.cpu.user{env:$env} by {host}"
+      visualization:
+        type: "line"
+        yaxis:
+          min: 0
+          max: 100
+    - title: "Memory Usage"
+      type: "timeseries"
+      query: "avg:system.mem.used{env:$env} by {host}"
+
+dashboards:
+  - name: "Production System Monitoring"
+    description: "Production environment system metrics"
+    template_variables:
+      - name: "env"
+        prefix: "env"
+        default: "prod"
+    widgets:
+      # Include system widgets template
+      <<: *system_widgets
+      # Additional production-specific widgets
+      - title: "Error Rate"
+        type: "query_value"
+        query: "sum:errors{env:$env}.as_rate()"
+        conditional_formats:
+          - comparator: ">"
+            value: 1
+            palette: "red"
+          - comparator: ">"
+            value: 0.5
+            palette: "yellow"
+
+  - name: "Staging System Monitoring"
+    description: "Staging environment system metrics"
+    template_variables:
+      - name: "env"
+        prefix: "env"
+        default: "staging"
+    widgets:
+      # Include system widgets template
+      <<: *system_widgets 

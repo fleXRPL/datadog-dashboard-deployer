@@ -1,0 +1,50 @@
+# Application monitoring dashboard configuration example
+version: "1.0"
+
+defaults:
+  layout_type: "ordered"
+  refresh_interval: 60
+  tags:
+    - "managed-by:datadog-dashboard-deployer"
+    - "team:application"
+
+dashboards:
+  - name: "Web Application Dashboard"
+    description: "Web application performance metrics"
+    template_variables:
+      - name: "service"
+        prefix: "service"
+        default: "web-api"
+      - name: "env"
+        prefix: "env"
+        default: "prod"
+    widgets:
+      - title: "Request Rate"
+        type: "timeseries"
+        query: "sum:http.requests{service:$service,env:$env} by {endpoint}.as_rate()"
+        visualization:
+          type: "line"
+
+      - title: "Response Time (p95)"
+        type: "timeseries"
+        query: "p95:http.response.time{service:$service,env:$env} by {endpoint}"
+        visualization:
+          type: "line"
+          yaxis:
+            min: 0
+            scale: "log"
+
+      - title: "Error Rate"
+        type: "query_value"
+        query: "sum:http.errors{service:$service,env:$env}.as_rate()"
+        conditional_formats:
+          - comparator: ">"
+            value: 0.05
+            palette: "red"
+          - comparator: ">"
+            value: 0.01
+            palette: "yellow"
+
+      - title: "Active Users"
+        type: "toplist"
+        query: "top(sum:users.active{service:$service,env:$env} by {region}, 10, 'mean', 'desc')" 
