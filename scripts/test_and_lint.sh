@@ -11,6 +11,10 @@ NC='\033[0m' # No Color
 
 echo -e "${YELLOW}Starting test and lint checks...${NC}\n"
 
+# Get the directory where the script is located
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PROJECT_ROOT="$( cd "$SCRIPT_DIR/.." && pwd )"
+
 # Function to run a command and check its status
 run_check() {
     echo -e "${YELLOW}Running $1...${NC}"
@@ -47,10 +51,15 @@ pip install -e .
 echo -e "${GREEN}✓ Dependencies installed${NC}\n"
 
 # Format code
-run_check "Black formatting" "black src/datadog_dashboard_deployer tests"
-run_check "isort check" "isort src/datadog_dashboard_deployer tests"
+echo -e "${YELLOW}Current directory: $(pwd)${NC}"
+echo -e "${YELLOW}Project root: ${PROJECT_ROOT}${NC}"
+echo -e "${YELLOW}Running black on: ${PROJECT_ROOT}/src/datadog_dashboard_deployer ${PROJECT_ROOT}/tests${NC}"
 
-# Lint with flake8
+# Run black and isort to actually format the files (without --check)
+run_check "Black formatting" "black src/datadog_dashboard_deployer tests"
+run_check "isort" "isort src/datadog_dashboard_deployer tests"
+
+# Then run flake8 which is check-only
 run_check "Flake8 linting" "flake8 src/datadog_dashboard_deployer tests"
 
 # Run tests with coverage
