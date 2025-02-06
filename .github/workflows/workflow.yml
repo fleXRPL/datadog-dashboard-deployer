@@ -29,9 +29,9 @@ jobs:
         pip install -e .
     - name: Run tests and linting
       run: |
-        black --check src/datadog_dashboard_deployer tests
-        isort --check src/datadog_dashboard_deployer tests
-        flake8 src/datadog_dashboard_deployer tests
+        black --check datadog_dashboard_deployer tests
+        isort --check datadog_dashboard_deployer tests
+        flake8 datadog_dashboard_deployer tests
         pytest tests/ --cov=datadog_dashboard_deployer --cov-report=xml --cov-report=term-missing --cov-fail-under=90
 
   publish:
