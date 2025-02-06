@@ -27,12 +27,14 @@ pip install datadog-dashboard-deployer
 ### Basic Usage
 
 1. Set up your DataDog credentials:
+
 ```bash
 export DATADOG_API_KEY='your-api-key'
 export DATADOG_APP_KEY='your-application-key'
 ```
 
 2. Create a dashboard configuration:
+
 ```yaml
 # config/dashboard_config.yaml
 version: "1.0"
@@ -49,13 +51,14 @@ dashboards:
 ```
 
 3. Deploy your dashboard:
+
 ```bash
 datadog-dashboard-deploy config/dashboard_config.yaml
 ```
 
 ## Project Structure
 
-```
+```bash
 datadog-dashboard-deployer/
 ├── src/
 │   └── datadog_dashboard_deployer/
@@ -89,6 +92,7 @@ datadog-dashboard-deployer/
    - Add `DATADOG_API_KEY` and `DATADOG_APP_KEY`
 
 2. Create a workflow file:
+
 ```yaml
 # .github/workflows/deploy.yml
 name: Deploy Dashboards
@@ -122,18 +126,21 @@ We welcome contributions! Please see our [Contributing Guide](https://github.com
 ### Development Setup
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/fleXRPL/datadog-dashboard-deployer.git
 cd datadog-dashboard-deployer
 ```
 
 2. Create and activate a virtual environment:
+
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 3. Install development dependencies:
+
 ```bash
 pip install -r requirements-dev.txt
 ```
