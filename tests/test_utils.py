@@ -5,9 +5,13 @@ import os
 
 import pytest
 
-from datadog_dashboard_deployer.utils import (format_error, get_version,
-                                              sanitize_string, setup_logging,
-                                              validate_environment)
+from datadog_dashboard_deployer.utils import (
+    format_error,
+    get_version,
+    sanitize_string,
+    setup_logging,
+    validate_environment,
+)
 
 
 def test_setup_logging():
