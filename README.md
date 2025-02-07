@@ -4,17 +4,17 @@ A powerful framework for deploying DataDog dashboards as code using CI/CD pipeli
 
 #### versions
 
-[![PyPI version](https://badge.fury.io/py/datadog-dashboard-deployer.svg)](https://badge.fury.io/py/datadog-dashboard-deployer))
+[![PyPI version](https://badge.fury.io/py/datadog-dashboard-deployer.svg)](https://badge.fury.io/py/datadog-dashboard-deployer)
 [![PyPI version](https://img.shields.io/pypi/v/datadog-dashboard-deployer.svg)](https://pypi.org/project/datadog-dashboard-deployer/)
 [![Python](https://img.shields.io/pypi/pyversions/datadog-dashboard-deployer.svg)](https://pypi.org/project/datadog-dashboard-deployer/)
 
 #### health
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployerb&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployerb)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployerb&metric=coverage)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployerb)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployerb&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployerb)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployerb&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployerb)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployerb&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployerb)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployer&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployer)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployer&metric=coverage)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployer)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployer&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployer)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployer&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployer)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployer&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployer)
 [![Dependabot Status](https://img.shields.io/badge/Dependabot-enabled-success.svg)](https://github.com/fleXRPL/datadog-dashboard-deployer/blob/main/.github/dependabot.yml)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
