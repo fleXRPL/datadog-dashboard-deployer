@@ -10,11 +10,11 @@ A powerful framework for deploying DataDog dashboards as code using CI/CD pipeli
 
 #### health
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_githubauthlib&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=fleXRPL_githubauthlib)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_githubauthlib&metric=coverage)](https://sonarcloud.io/summary/new_code?id=fleXRPL_githubauthlib)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_githubauthlib&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=fleXRPL_githubauthlib)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_githubauthlib&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=fleXRPL_githubauthlib)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_githubauthlib&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=fleXRPL_githubauthlib)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployerb&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployerb)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployerb&metric=coverage)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployerb)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployerb&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployerb)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployerb&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployerb)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployerb&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployerb)
 [![Dependabot Status](https://img.shields.io/badge/Dependabot-enabled-success.svg)](https://github.com/fleXRPL/datadog-dashboard-deployer/blob/main/.github/dependabot.yml)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
