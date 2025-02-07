@@ -2,7 +2,7 @@
 Setup configuration for the DataDog Dashboard Deployer package.
 """
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 # Read version from package
 with open("src/datadog_dashboard_deployer/__init__.py", "r") as f:
@@ -59,4 +59,4 @@ setup(
         "Source": "https://github.com/fleXRPL/datadog-dashboard-deployer",
         "Issues": "https://github.com/fleXRPL/datadog-dashboard-deployer/issues",
     },
-) 
+)

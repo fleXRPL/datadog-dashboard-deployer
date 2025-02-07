@@ -53,11 +53,10 @@ echo -e "${GREEN}✓ Dependencies installed${NC}\n"
 # Format code
 echo -e "${YELLOW}Current directory: $(pwd)${NC}"
 echo -e "${YELLOW}Project root: ${PROJECT_ROOT}${NC}"
-echo -e "${YELLOW}Running black on: ${PROJECT_ROOT}/src/datadog_dashboard_deployer ${PROJECT_ROOT}/tests${NC}"
 
-# Run black and isort to actually format the files (without --check)
-run_check "Black formatting" "black src/datadog_dashboard_deployer tests"
-run_check "isort" "isort src/datadog_dashboard_deployer tests"
+# Run isort first, then black to ensure consistent formatting
+run_check "Import sorting" "isort src/datadog_dashboard_deployer tests"
+run_check "Code formatting" "black src/datadog_dashboard_deployer tests"
 
 # Then run flake8 which is check-only
 run_check "Flake8 linting" "flake8 src/datadog_dashboard_deployer tests"
