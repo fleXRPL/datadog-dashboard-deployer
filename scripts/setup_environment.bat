@@ -16,7 +16,7 @@ set "PROJECT_ROOT=%SCRIPT_DIR%.."
 :: Function to check if command exists
 where python >nul 2>nul
 if %ERRORLEVEL% neq 0 (
-    echo %RED%Python not found. Please install Python 3.8 or higher%NC%
+    echo %RED%Python not found. Please install Python 3.9 or higher%NC%
     exit /b 1
 )
 

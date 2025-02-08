@@ -79,7 +79,7 @@ DASHBOARD_SCHEMA = {
 class ConfigParser:
     """Parser for dashboard configuration files."""
 
-    def __init__(self, config_path: str):
+    def __init__(self, config_path: str) -> None:
         """
         Initialize the configuration parser.
 
@@ -125,7 +125,7 @@ class ConfigParser:
             logger.error(f"Error processing configuration: {e}")
             raise
 
-    def _validate_config(self, config: Dict) -> None:
+    def _validate_config(self, config: Dict[str, Any]) -> None:
         """
         Validate configuration against schema.
 
@@ -138,7 +138,7 @@ class ConfigParser:
             logger.error(f"Configuration validation failed: {e.message}")
             raise
 
-    def _apply_defaults(self, config: Dict) -> None:
+    def _apply_defaults(self, config: Dict[str, Any]) -> None:
         """
         Apply default values to dashboard configurations.
 

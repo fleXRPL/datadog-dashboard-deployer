@@ -37,7 +37,7 @@ if command_exists python3; then
     PYTHON_VERSION=$(python3 --version | cut -d' ' -f2)
     echo -e "${GREEN}Found Python $PYTHON_VERSION${NC}\n"
 else
-    echo -e "${RED}Python 3 not found. Please install Python 3.8 or higher${NC}\n"
+    echo -e "${RED}Python 3 not found. Please install Python 3.9 or higher${NC}\n"
     exit 1
 fi
 
