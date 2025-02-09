@@ -31,20 +31,7 @@ dashboards:
       - name: "env"
         prefix: "env"
         default: "prod"
-    widgets:
-      # Include system widgets template
-      <<: *system_widgets
-      # Additional production-specific widgets
-      - title: "Error Rate"
-        type: "query_value"
-        query: "sum:errors{env:$env}.as_rate()"
-        conditional_formats:
-          - comparator: ">"
-            value: 1
-            palette: "red"
-          - comparator: ">"
-            value: 0.5
-            palette: "yellow"
+    widgets: *system_widgets
 
   - name: "Staging System Monitoring"
     description: "Staging environment system metrics"

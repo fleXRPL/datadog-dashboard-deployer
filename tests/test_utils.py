@@ -5,9 +5,13 @@ import os
 
 import pytest
 
-from datadog_dashboard_deployer.utils import (format_error, get_version,
-                                              sanitize_string, setup_logging,
-                                              validate_environment)
+from datadog_dashboard_deployer.utils import (
+    format_error,
+    get_version,
+    sanitize_string,
+    setup_logging,
+    validate_environment,
+)
 
 
 def test_setup_logging():
@@ -37,12 +41,11 @@ def test_validate_environment_valid():
     validate_environment()
 
 
-def test_validate_environment_missing():
+def test_validate_environment_missing(monkeypatch):
     """Test environment validation with missing variables."""
-    if "DATADOG_API_KEY" in os.environ:
-        del os.environ["DATADOG_API_KEY"]
-    if "DATADOG_APP_KEY" in os.environ:
-        del os.environ["DATADOG_APP_KEY"]
+    # Safely remove environment variables using monkeypatch
+    monkeypatch.delenv("DATADOG_API_KEY", raising=False)
+    monkeypatch.delenv("DATADOG_APP_KEY", raising=False)
 
     with pytest.raises(EnvironmentError) as exc_info:
         validate_environment()

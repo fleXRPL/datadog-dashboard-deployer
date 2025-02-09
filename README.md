@@ -1,11 +1,27 @@
 # DataDog Dashboard Deployer
 
-[![PyPI version](https://badge.fury.io/py/datadog-dashboard-deployer.svg)](https://badge.fury.io/py/datadog-dashboard-deployer)
-[![GitHub Actions Status](https://github.com/fleXRPL/datadog-dashboard-deployer/workflows/CI/badge.svg)](https://github.com/fleXRPL/datadog-dashboard-deployer/actions)
-[![Documentation Status](https://readthedocs.org/projects/datadog-dashboard-deployer/badge/?version=latest)](https://datadog-dashboard-deployer.readthedocs.io/en/latest/?badge=latest)
-[![License](https://img.shields.io/github/license/fleXRPL/datadog-dashboard-deployer)](https://github.com/fleXRPL/datadog-dashboard-deployer/blob/main/LICENSE)
-
 A powerful framework for deploying DataDog dashboards as code using CI/CD pipelines. Define, version, and automate your DataDog dashboard deployments using YAML configurations.
+
+#### versions
+
+[![PyPI version](https://badge.fury.io/py/datadog-dashboard-deployer.svg)](https://badge.fury.io/py/datadog-dashboard-deployer)
+[![PyPI version](https://img.shields.io/pypi/v/datadog-dashboard-deployer.svg)](https://pypi.org/project/datadog-dashboard-deployer/)
+[![Python](https://img.shields.io/pypi/pyversions/datadog-dashboard-deployer.svg)](https://pypi.org/project/datadog-dashboard-deployer/)
+
+#### health
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployer&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployer)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployer&metric=coverage)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployer)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployer&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployer)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployer&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployer)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployer&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployer)
+[![Dependabot Status](https://img.shields.io/badge/Dependabot-enabled-success.svg)](https://github.com/fleXRPL/datadog-dashboard-deployer/blob/main/.github/dependabot.yml)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+#### stats
+
+[![Downloads](https://pepy.tech/badge/datadog-dashboard-deployer)](https://pepy.tech/project/datadog-dashboard-deployer)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
 
@@ -88,6 +104,7 @@ datadog-dashboard-deployer/
 ## GitHub Actions Integration
 
 1. Add DataDog credentials as secrets:
+
    - Go to repository Settings > Secrets and Variables > Actions
    - Add `DATADOG_API_KEY` and `DATADOG_APP_KEY`
 
@@ -98,7 +115,7 @@ datadog-dashboard-deployer/
 name: Deploy Dashboards
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -109,7 +126,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'
+          python-version: "3.x"
       - name: Deploy dashboards
         env:
           DATADOG_API_KEY: ${{ secrets.DATADOG_API_KEY }}

@@ -4,6 +4,7 @@ Command-line interface for the DataDog Dashboard Deployer.
 
 import os
 import sys
+from typing import Optional
 
 import click
 
@@ -26,8 +27,16 @@ def cli():
 )
 @click.option("--verbose", "-v", is_flag=True, help="Enable verbose logging")
 @click.option("--site", help="DataDog site (e.g., datadoghq.com)")
-def deploy(config_file, dry_run, verbose, site):
-    """Deploy dashboards from configuration file."""
+def deploy(config_file: str, dry_run: bool, verbose: bool, site: Optional[str]) -> None:
+    """
+    Deploy dashboards from configuration file.
+
+    Args:
+        config_file: Path to the YAML configuration file
+        dry_run: If True, only validate configuration without deploying
+        verbose: If True, enable debug logging
+        site: Optional DataDog site URL
+    """
     try:
         # Set up logging
         setup_logging("DEBUG" if verbose else "INFO")

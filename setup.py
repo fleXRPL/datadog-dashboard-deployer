@@ -2,17 +2,17 @@
 Setup configuration for the DataDog Dashboard Deployer package.
 """
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 # Read version from package
-with open("src/datadog_dashboard_deployer/__init__.py", "r") as f:
+with open("src/datadog_dashboard_deployer/__init__.py", "r", encoding="utf-8") as f:
     for line in f:
         if line.startswith("__version__"):
             version = line.split("=")[1].strip().strip('"')
             break
 
 # Read README for long description
-with open("README.md", "r") as f:
+with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
@@ -44,19 +44,19 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: System :: Monitoring",
         "Topic :: System :: Systems Administration",
     ],
-    python_requires=">=3.8",
+    python_requires=">=3.9",
     keywords="datadog dashboard monitoring devops automation",
     project_urls={
         "Documentation": "https://github.com/fleXRPL/datadog-dashboard-deployer/wiki",
         "Source": "https://github.com/fleXRPL/datadog-dashboard-deployer",
         "Issues": "https://github.com/fleXRPL/datadog-dashboard-deployer/issues",
     },
-) 
+)

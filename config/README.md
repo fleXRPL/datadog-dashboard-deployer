@@ -5,13 +5,17 @@ This directory contains example configurations for the DataDog Dashboard Deploye
 ## Available Examples
 
 ### 1. Basic Configuration (`examples/basic.yaml`)
+
 A simple configuration demonstrating:
+
 - Basic dashboard structure
 - Essential system metrics
 - Common widget types
 
 ### 2. Advanced Configuration (`examples/advanced.yaml`)
+
 Demonstrates advanced features including:
+
 - Global defaults
 - Template variables
 - Widget templates
@@ -19,7 +23,9 @@ Demonstrates advanced features including:
 - Conditional formatting
 
 ### 3. Application Monitoring (`examples/application.yaml`)
+
 Shows how to configure:
+
 - Web application metrics
 - Performance monitoring
 - Error tracking
@@ -28,11 +34,13 @@ Shows how to configure:
 ## Usage
 
 1. Copy an example configuration:
+
    ```bash
    cp examples/basic.yaml my-dashboard.yaml
    ```
 
 2. Modify the configuration for your needs:
+
    ```yaml
    dashboards:
      - name: "My Dashboard"
@@ -48,11 +56,13 @@ Shows how to configure:
 ## Best Practices
 
 1. **Organization**
+
    - Use meaningful dashboard and widget names
    - Group related metrics together
    - Include clear descriptions
 
 2. **Templates**
+
    - Use templates for common widget patterns
    - Define global defaults where appropriate
    - Leverage template variables for flexibility
@@ -66,4 +76,4 @@ Shows how to configure:
 
 - [Configuration Guide](https://github.com/fleXRPL/datadog-dashboard-deployer/wiki/Configuration-Guide)
 - [Dashboard Examples](https://github.com/fleXRPL/datadog-dashboard-deployer/wiki/Dashboard-Examples)
-- [Best Practices](https://github.com/fleXRPL/datadog-dashboard-deployer/wiki/Best-Practices) 
+- [Best Practices](https://github.com/fleXRPL/datadog-dashboard-deployer/wiki/Best-Practices)
