@@ -5,14 +5,14 @@ Setup configuration for the DataDog Dashboard Deployer package.
 from setuptools import find_packages, setup
 
 # Read version from package
-with open("src/datadog_dashboard_deployer/__init__.py", "r") as f:
+with open("src/datadog_dashboard_deployer/__init__.py", "r", encoding="utf-8") as f:
     for line in f:
         if line.startswith("__version__"):
             version = line.split("=")[1].strip().strip('"')
             break
 
 # Read README for long description
-with open("README.md", "r") as f:
+with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
 setup(

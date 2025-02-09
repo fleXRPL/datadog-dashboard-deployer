@@ -7,7 +7,7 @@ from datadog_dashboard_deployer.core import DashboardDeployer
 
 def test_initialize_client(mock_datadog):
     """Test DataDog client initialization."""
-    mock_api, mock_initialize = mock_datadog
+    _, mock_initialize = mock_datadog
     deployer = DashboardDeployer("test-api-key", "test-app-key")
 
     # Verify the deployer was initialized with correct credentials
