@@ -11,7 +11,7 @@ A powerful framework for deploying DataDog dashboards as code using CI/CD pipeli
 #### health
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployer&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployer)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployer&metric=coverage)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployer)
+[![Overall Coverage](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployer&metric=coverage)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployer)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployer&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployer)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployer&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployer)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=fleXRPL_datadog-dashboard-deployer&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=fleXRPL_datadog-dashboard-deployer)
