@@ -1,0 +1,174 @@
+---
+description: Creating python libraries for pypi.org
+globs: **/*.py pyproject.toml requirements*.txt .github/workflows/*.yml
+---
+@Codebase @Docs/pypi @Docs/python3
+
+---
+description: Comprehensive guide for Python package publishing with MVP focus
+globs:
+
+  - "**/*.py"
+  - "pyproject.toml"
+  - "setup.py"
+  - "setup.cfg"
+  - "requirements*.txt"
+  - ".github/workflows/*.yml"
+---
+
+# Python Package Publishing Requirements
+
+```bash
+Project_name/
+├── src/
+│ └── package_name/
+│ ├── init.py # Version and package metadata
+│ └── core modules
+├── tests/ # Unit and integration tests
+├── pyproject.toml # Build system requirements
+├── README.md # Project documentation
+├── LICENSE # MIT License
+├── .gitignore # Python standard gitignore
+├── requirements.txt # Production dependencies
+└── requirements-dev.txt # Development dependencies
+```
+
+## PyProject.toml Requirements
+
+```bash
+datadog-dashboard-deployer/.cursor/rules/python-to-pypi-rules.mdc
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "package-name"
+version = "0.1.0"
+description = "Brief description"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Author Name", email = "author@example.com"}]
+classifiers = [
+"Development Status :: 4 - Beta",
+"Programming Language :: Python :: 3",
+"Programming Language :: Python :: 3.9",
+"Programming Language :: Python :: 3.10",
+"Programming Language :: Python :: 3.11",
+"Programming Language :: Python :: 3.12",
+"License :: OSI Approved :: MIT License",
+"Operating System :: OS Independent",
+```
+
+## Core Package Structure
+- Must have `src/` directory layout
+- Must include `pyproject.toml` as primary configuration
+- Must include `README.md` with essential documentation
+- Must include `LICENSE` file (MIT recommended for MVP)
+- Must include `.gitignore` for Python projects
+- Must include `requirements.txt` and `requirements-dev.txt`
+
+
+## GitHub Actions Workflow Requirements
+- Must include Python matrix testing (3.9-3.12)
+- Must include linting and testing steps
+- Must include PyPI publishing on tags
+- Must use trusted publisher workflow
+- Must include dependency scanning
+- Must include SonarCloud integration
+- Must include Dependabot configuration
+
+## Quality Standards
+- Minimum 90% test coverage
+- Zero linting errors (using black, isort, flake8)
+- Type hints required for public APIs
+- Google-style docstrings required
+- SonarCloud quality gate must pass
+- Maximum complexity score of 10
+
+## Security Requirements
+- Must use Dependabot for dependency updates
+- Must include security scanning in CI
+- Must use environment secrets for credentials
+- Must validate user inputs
+- Must sanitize data outputs
+- Must use trusted publisher for PyPI
+- Must scan dependencies for vulnerabilities
+
+## Documentation Requirements
+- Clear installation instructions
+- Basic usage examples with code snippets
+- API documentation with type hints
+- Contributing guidelines
+- Security policy
+- Changelog following Keep a Changelog format
+- Badges for build status, coverage, version
+
+## Version Control
+- Semantic versioning required
+- Git tags for releases
+- Protected main branch
+- PR reviews required
+- Conventional commits preferred
+- Branch protection rules
+- Required status checks
+
+## PyPI Publishing Rules
+- Test on TestPyPI first
+- Version bumping automated
+- Release notes required
+- Package signing recommended
+- Wheel and sdist required
+- Trusted publisher configuration
+- Version tag triggers
+
+## Development Environment
+- Virtual environment required
+- Pre-commit hooks required
+- Editor config for consistency
+- Local testing setup documented
+- Development dependencies separated
+- Local development guide
+- Debugging configuration
+
+## Minimum Viable Product Priorities
+1. Core functionality working
+2. Basic documentation complete
+3. Essential tests passing
+4. Security basics covered
+5. CI/CD pipeline functional
+6. Package successfully published
+7. Quality gates passing
+8. Security scanning enabled
+
+## Testing Requirements
+- Unit tests required
+- Integration tests recommended
+- Coverage reports required
+- Test matrix for Python versions
+- Mock external dependencies
+- Parameterized tests preferred
+- Test documentation required
+
+## Code Quality Tools
+- @.flake8
+- @.pre-commit-config.yaml
+- @pyproject.toml
+- @setup.cfg
+
+## CI/CD Configuration
+- @.github/workflows/workflow.yml
+- @.github/workflows/sonarcloud.yml
+- @.github/dependabot.yml
+
+## Documentation Files
+- @README.md
+- @CONTRIBUTING.md
+- @SECURITY.md
+- @CHANGELOG.md
+
+## Build and Release Scripts
+- @scripts/build_and_publish.sh
+- @scripts/test_and_lint.sh
+- @scripts/setup_environment.sh
+
+
