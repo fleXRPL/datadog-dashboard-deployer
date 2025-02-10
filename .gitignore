@@ -170,6 +170,9 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
+# VSCode workspace files
+*.code-workspace
+
 # macOS system files
 .DS_Store
 .AppleDouble
